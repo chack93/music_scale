@@ -1,18 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: {enabled: true},
-  modules: [
-    '@invictus.codes/nuxt-vuetify',
-    '@pinia/nuxt',
-  ],
+  devtools: { enabled: true },
+  modules: ["@invictus.codes/nuxt-vuetify", "@pinia/nuxt", "@nuxtjs/i18n"],
   vuetify: {
-    vuetifyOptions: {
-      // @TODO: list all vuetify options
-    },
+    vuetifyOptions: {},
 
     moduleOptions: {
       treeshaking: true,
-      useIconCDN: false,
+      useIconCDN: true,
     },
-  }
-})
+  },
+  i18n: {
+    locales: ["en", "de"],
+    defaultLocale: "en",
+  },
+});
