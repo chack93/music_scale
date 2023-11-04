@@ -1,0 +1,249 @@
+[
+  {
+    "name": "major-pentatonic",
+    "mode": 5,
+    "interval": [0,2,4,7,9]
+  },
+  {
+    "name": "minor-pentatonic",
+    "mode": 5,
+    "interval": [0,3,5,7,10]
+  },
+  {
+    "name": "hirajoshi",
+    "mode": 5,
+    "interval": [0,4,6,7,11]
+  },
+  {
+    "name": "in",
+    "mode": 5,
+    "interval": [0,1,5,7,8]
+  },
+  {
+    "name": "insen",
+    "mode": 5,
+    "interval": [0,1,5,7,10]
+  },
+  {
+    "name": "iwato",
+    "mode": 5,
+    "interval": [0,1,5,6,10]
+  },
+  {
+    "name": "yo",
+    "mode": 5,
+    "interval": [0,3,5,7,10]
+  },
+  {
+    "name": "blues",
+    "mode": 6,
+    "interval": [0,3,5,6,7,10]
+  },
+  {
+    "name": "augmented",
+    "mode": 6,
+    "interval": [0,3,4,7,8,11]
+  },
+  {
+    "name": "istrian",
+    "mode": 6,
+    "interval": [0,1,3,4,6,7]
+  },
+  {
+    "name": "prometheus",
+    "mode": 6,
+    "interval": [0,2,4,6,9,10]
+  },
+  {
+    "name": "tritone",
+    "mode": 6,
+    "interval": [0,1,4,6,7,10]
+  },
+  {
+    "name": "two-semitone-tritone",
+    "mode": 6,
+    "interval": [0,1,2,6,7,8]
+  },
+  {
+    "name": "whole-tone",
+    "mode": 6,
+    "interval": [0,2,4,6,8,10]
+  },
+  {
+    "name": "ionian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,2,4,5,7,9,11]
+  },
+  {
+    "name": "dorian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,2,3,5,7,9,10]
+  },
+  {
+    "name": "phrygian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,1,3,5,7,8,10]
+  },
+  {
+    "name": "lydian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,2,4,6,7,9,11]
+  },
+  {
+    "name": "mixolydian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,2,4,5,7,9,10]
+  },
+  {
+    "name": "aeolian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,2,3,5,7,8,10]
+  },
+  {
+    "name": "locrian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,1,3,5,6,8,10]
+  },
+  {
+    "name": "altered-or-super-locrian",
+    "mode": 7,
+    "interval": [0,1,3,4,6,8,10]
+  },
+  {
+    "name": "melodic-minor-ascending",
+    "mode": 7,
+    "interval": [0,2,3,5,7,9,11]
+  },
+  {
+    "name": "melodic-minor-descending",
+    "mode": 7,
+    "interval": [12,10,8,7,5,3,2]
+  },
+  {
+    "name": "lydian-augmented",
+    "mode": 7,
+    "interval": [0,2,4,6,8,9,11]
+  },
+  {
+    "name": "lydian-dominant-or-acoustic",
+    "mode": 7,
+    "interval": [0,2,4,6,7,9,10]
+  },
+  {
+    "name": "harmonic-major",
+    "mode": 7,
+    "interval": [0,2,4,5,7,8,11]
+  },
+  {
+    "name": "half-diminished",
+    "mode": 7,
+    "interval": [0,2,3,5,6,8,10]
+  },
+  {
+    "name": "phrygian-dominant",
+    "mode": 7,
+    "interval": [0,1,4,5,7,8,10]
+  },
+  {
+    "name": "harmonic-minor",
+    "mode": 7,
+    "interval": [0,2,3,5,7,8,11]
+  },
+  {
+    "name": "lydian-diminished",
+    "mode": 7,
+    "interval": [0,2,3,6,7,9,11]
+  },
+  {
+    "name": "double-harmonic",
+    "mode": 7,
+    "interval": [0,1,4,5,7,8,11]
+  },
+  {
+    "name": "enigmatic",
+    "mode": 7,
+    "interval": [0,1,4,6,8,10,11]
+  },
+  {
+    "name": "flamenco-mode",
+    "mode": 7,
+    "interval": [0,1,4,5,7,8,11]
+  },
+  {
+    "name": "gypsy",
+    "mode": 7,
+    "interval": [0,2,3,6,7,8,10]
+  },
+  {
+    "name": "hungarian-minor-or-hungarian-gypsy",
+    "mode": 7,
+    "interval": [0,2,3,6,7,8,11]
+  },
+  {
+    "name": "hungarian-major",
+    "mode": 7,
+    "interval": [0,3,4,6,7,9,10]
+  },
+  {
+    "name": "major-bebop-7",
+    "mode": 7,
+    "interval": [0,2,4,5,7,9,11]
+  },
+  {
+    "name": "major-locrian",
+    "mode": 7,
+    "interval": [0,2,4,5,6,8,10]
+  },
+  {
+    "name": "neapolitan-major",
+    "mode": 7,
+    "interval": [0,1,3,5,7,9,11]
+  },
+  {
+    "name": "neapolitan-minor",
+    "mode": 7,
+    "interval": [0,1,3,5,7,8,11]
+  },
+  {
+    "name": "persian",
+    "mode": 7,
+    "interval": [0,1,4,5,6,8,11]
+  },
+  {
+    "name": "ukrainian-dorian",
+    "mode": 7,
+    "interval": [0,2,3,6,7,9,10]
+  },
+  {
+    "name": "major-bebop-8",
+    "mode": 8,
+    "interval": [0,2,4,5,7,8,9,11]
+  },
+  {
+    "name": "bebop-dominant",
+    "mode": 8,
+    "interval": [0,2,4,5,7,9,10,11]
+  },
+  {
+    "name": "octatonic",
+    "mode": 8,
+    "interval": [0,2,3,5,6,8,9,11]
+  },
+  {
+    "name": "octatonic-altered",
+    "mode": 8,
+    "interval": [0,1,3,4,6,7,9,10]
+  },
+  {
+    "name": "chromatic",
+    "mode": 12,
+    "interval": [0,1,2,3,4,5,6,7,8,9,10,11]
+  }
+]
