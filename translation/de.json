@@ -1,6 +1,6 @@
 {
     "nav.home": "Start",
-    "nav.appname": "Tonleiter",
+    "nav.key": "Grundton",
     "nav.modes": "Modi",
     "nav.modes.chromatic": "Chromatik",
     "nav.modes.decatonic": "Dekatonik",
@@ -58,5 +58,7 @@
     "nav.scale.ukrainian-dorian": "Ukrainische Dorisch Tonleiter",
     "nav.scale.vietnamese-of-harmonics": "Vietnamese harmonische Tonleiter",
     "nav.scale.whole-tone": "Ganzton Tonleiter",
-    "nav.scale.yo": "Yo"
+    "nav.scale.yo": "Yo",
+    "heading.appname": "Tonleiter",
+    "heading.music-sheet": "Noten"
 }

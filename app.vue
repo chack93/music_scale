@@ -5,7 +5,7 @@
         <v-layout class="rounded rounded-md">
           <Toolbar />
           <v-main
-            class="d-flex align-center justify-center"
+            class="d-flex flex-column align-center justify-start mt-2"
             style="min-height: 300px"
           >
             <NuxtPage />

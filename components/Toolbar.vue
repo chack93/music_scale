@@ -30,22 +30,52 @@
       variant="text"
       @click.stop="store.drawerOpen = !store.drawerOpen"
     ></v-app-bar-nav-icon>
-    <v-toolbar-title>{{ $t("nav.appname") }}</v-toolbar-title>
-    <v-spacer />
+    <v-app-bar-title>{{ $t("heading.appname") }}</v-app-bar-title>
+    <template v-slot:append>
+      <v-menu>
+        <template v-slot:activator="{ props }">
+          <span class="text-button pr-2"> {{ $t("nav.key") }}</span>
+          <v-btn append-icon="mdi-menu-down" v-bind="props">{{
+            selectedKey
+          }}</v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item
+            v-for="key in keys"
+            :key="key"
+            @click="() => (selectedKey = key)"
+          >
+            <v-list-item-title>{{ key }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu></template
+    >
     <!--<v-btn variant="text" icon="mdi-dots-vertical"></v-btn>-->
   </v-app-bar>
-  <template> </template>
 </template>
 
 <script setup>
+import { storeToRefs } from "pinia";
 import { useDisplay } from "vuetify";
+import { helperKeyList } from "~/composables/helper_scale";
 
 const store = useStoreToolbar();
+let { selectedKey } = storeToRefs(store);
 const route = useRoute();
+const router = useRouter();
 const localePath = useLocalePath();
 const { mdAndUp } = useDisplay();
+const keys = helperKeyList;
 
+watch(selectedKey, (newVal) => {
+  router.replace({ hash: `#${newVal}` });
+});
 onMounted(() => {
+  const hashKey = route.hash.replace("#", "");
+  if (hashKey && keys.includes(hashKey)) {
+    selectedKey = hashKey;
+  }
   if (mdAndUp) {
     store.drawerOpen = true;
   }
@@ -87,18 +117,6 @@ onMounted(() => {
       return [{ divider: true, title }, ...navItemsMap[el]];
     })
     .flat();
-  console.log(navItems);
   store.items = [...store.items, ...navItems];
-  /*
-  name: string;
-  mode: number;
-  group?: string;
-  interval: number[];
-   */
-  console.log(helperScaleList);
 });
-//{ title: "nav.scale.major", link: "/scale/major" },
-//{ title: "nav.scale.minor", link: "/scale/minor" },
-// const switchLocalePath = useSwitchLocalePath();
-// -> use in <NuxtLink :to="switchLocalePath("de")"
 </script>
