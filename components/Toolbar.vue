@@ -36,7 +36,7 @@
         <template v-slot:activator="{ props }">
           <span class="text-button pr-2"> {{ $t("nav.key") }}</span>
           <v-btn append-icon="mdi-menu-down" v-bind="props">{{
-            selectedKey
+            store.selectedKey
           }}</v-btn>
         </template>
 
@@ -44,7 +44,11 @@
           <v-list-item
             v-for="key in keys"
             :key="key"
-            @click="() => (selectedKey = key)"
+            @click="
+              () => {
+                store.$patch({ selectedKey: key });
+              }
+            "
           >
             <v-list-item-title>{{ key }}</v-list-item-title>
           </v-list-item>
@@ -56,25 +60,23 @@
 </template>
 
 <script setup>
-import { storeToRefs } from "pinia";
 import { useDisplay } from "vuetify";
 import { helperKeyList } from "~/composables/helper_scale";
 
 const store = useStoreToolbar();
-let { selectedKey } = storeToRefs(store);
 const route = useRoute();
 const router = useRouter();
 const localePath = useLocalePath();
 const { mdAndUp } = useDisplay();
 const keys = helperKeyList;
 
-watch(selectedKey, (newVal) => {
+watch(store.selectedKey, (newVal) => {
   router.replace({ hash: `#${newVal}` });
 });
 onMounted(() => {
   const hashKey = route.hash.replace("#", "");
   if (hashKey && keys.includes(hashKey)) {
-    selectedKey = hashKey;
+    store.$patch({ selectedKey: hashKey });
   }
   if (mdAndUp) {
     store.drawerOpen = true;

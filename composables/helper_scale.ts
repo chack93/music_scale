@@ -19,6 +19,8 @@ export const helperKeyList = [
   "E",
   "F",
   "F#",
+  "G",
+  "G#",
 ];
 export const helperScaleList = scaleData;
 export function helperScaleMap(): HelperScaleEntryMap {
