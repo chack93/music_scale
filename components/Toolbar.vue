@@ -60,6 +60,7 @@
 </template>
 
 <script setup>
+import { storeToRefs } from "pinia";
 import { useDisplay } from "vuetify";
 import { helperKeyList } from "~/composables/helper_scale";
 
@@ -69,8 +70,9 @@ const router = useRouter();
 const localePath = useLocalePath();
 const { mdAndUp } = useDisplay();
 const keys = helperKeyList;
+let { selectedKey } = storeToRefs(store);
 
-watch(store.selectedKey, (newVal) => {
+watch(selectedKey, (newVal) => {
   router.replace({ hash: `#${newVal}` });
 });
 onMounted(() => {

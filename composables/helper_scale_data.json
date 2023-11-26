@@ -70,28 +70,16 @@
     "interval": [0,2,4,6,8,10]
   },
   {
-    "name": "ionian-mode",
-    "mode": 7,
-    "group":"diatonic",
-    "interval": [0,2,4,5,7,9,11]
-  },
-  {
-    "name": "dorian-mode",
-    "mode": 7,
-    "group":"diatonic",
-    "interval": [0,2,3,5,7,9,10]
-  },
-  {
-    "name": "phrygian-mode",
-    "mode": 7,
-    "group":"diatonic",
-    "interval": [0,1,3,5,7,8,10]
-  },
-  {
     "name": "lydian-mode",
     "mode": 7,
     "group":"diatonic",
     "interval": [0,2,4,6,7,9,11]
+  },
+  {
+    "name": "ionian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,2,4,5,7,9,11]
   },
   {
     "name": "mixolydian-mode",
@@ -100,10 +88,22 @@
     "interval": [0,2,4,5,7,9,10]
   },
   {
+    "name": "dorian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,2,3,5,7,9,10]
+  },
+  {
     "name": "aeolian-mode",
     "mode": 7,
     "group":"diatonic",
     "interval": [0,2,3,5,7,8,10]
+  },
+  {
+    "name": "phrygian-mode",
+    "mode": 7,
+    "group":"diatonic",
+    "interval": [0,1,3,5,7,8,10]
   },
   {
     "name": "locrian-mode",

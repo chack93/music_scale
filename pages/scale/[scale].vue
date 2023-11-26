@@ -3,9 +3,17 @@
     {{ $t("nav.scale") }}: {{ storeToolbar.selectedKey }}
     {{ $t(`nav.scale.${$route.params.scale}`) }}
   </h1>
-  <v-card :title="$t('heading.music-sheet')"
+
+  <v-card :title="$t('heading.music-sheet')" class="mt-6"
     ><v-card-item
       ><MusicSheet :keyNote="selectedKey" :scale="selectedScale" /></v-card-item
+  ></v-card>
+
+  <v-card :title="$t('heading.guitar-fretboard')" class="mt-6"
+    ><v-card-item
+      ><FretboardView
+        :keyNote="selectedKey"
+        :scale="selectedScale" /></v-card-item
   ></v-card>
 </template>
 

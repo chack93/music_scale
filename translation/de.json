@@ -9,6 +9,7 @@
     "nav.modes.hexatonic": "Hexatonik",
     "nav.modes.octatonic": "Oktatonik",
     "nav.modes.pentatonic": "Pentatonik",
+    "nav.groups.diatatonic": "Diatatonik",
     "nav.scale": "Tonleiter",
     "nav.scale.aeolian-mode": "Äolisch (Moll)",
     "nav.scale.altered-or-super-locrian": "Super Lokrian (Altered)",
@@ -60,5 +61,6 @@
     "nav.scale.whole-tone": "Ganzton Tonleiter",
     "nav.scale.yo": "Yo",
     "heading.appname": "Tonleiter",
-    "heading.music-sheet": "Noten"
+    "heading.music-sheet": "Noten",
+    "heading.guitar-fretboard": "Gitarren Griffbrett"
 }

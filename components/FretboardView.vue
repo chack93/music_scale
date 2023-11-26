@@ -64,67 +64,16 @@ function renderScale() {
 
     const noteList = selectedScale.interval.map((el) => {
       const noteIdx = (keyNoteDeltaIdx + el) % helperKeyList.length;
-      return helperKeyList[noteIdx];
-    });
-
-    const idxOfC = noteList.indexOf("C");
-    const idxOfCs = noteList.indexOf("C#");
-    let idxOfOctaveJump = 0;
-    if (idxOfC !== -1) {
-      idxOfOctaveJump = idxOfC;
-    } else if (idxOfCs !== -1) {
-      idxOfOctaveJump = idxOfCs;
-    } else {
-      // find nearest note to C
-      const idxOfA = noteList.indexOf("A");
-      const idxOfAs = noteList.indexOf("A#");
-      const idxOfB = noteList.indexOf("B");
-      const idxOfD = noteList.indexOf("D");
-      const idxOfDs = noteList.indexOf("Ds");
-      if (idxOfD !== -1) {
-        idxOfOctaveJump = idxOfD;
-      } else if (idxOfDs !== -1) {
-        idxOfOctaveJump = idxOfDs;
-      } else if (idxOfB !== -1) {
-        idxOfOctaveJump = idxOfB + 1;
-      } else if (idxOfAs !== -1) {
-        idxOfOctaveJump = idxOfAs + 1;
-      } else if (idxOfA !== -1) {
-        idxOfOctaveJump = idxOfA + 1;
-      }
-    }
-    const descendingScale =
-      selectedScale.interval[0] > selectedScale.interval[1];
-    const noteStaveList = noteList.map((el, idx) => {
-      let pitch = 4;
-      if (descendingScale) {
-        pitch = pitch + 0;
-        if (keyNoteDeltaIdx >= 3) {
-          pitch = pitch + 1;
-        }
-        if (idx > idxOfOctaveJump) {
-          pitch = pitch - 1;
-        }
-      } else {
-        if (keyNoteDeltaIdx > 3) {
-          pitch = pitch + 1;
-        }
-        if (idx < idxOfOctaveJump) {
-          pitch = pitch - 1;
-        }
-      }
-      const note = new StaveNote({
-        keys: [`${el}/${pitch}`],
-        duration: "w",
-      });
-      if (el.includes("#")) {
+      const key = helperKeyList[noteIdx];
+      const pitch = "4";
+      const note = new StaveNote({ keys: [`${key}/${pitch}`], duration: "w" });
+      if (key.includes("#")) {
         note.addModifier(new Accidental("#"));
       }
       return note;
     });
-
     const voice = new Voice({ num_beats: noteList.length * 4, beat_value: 4 });
-    voice.addTickables(noteStaveList);
+    voice.addTickables(noteList);
     new Formatter().joinVoices([voice]).format([voice], renderWidth - 50);
     const stave = new Stave(10, 20, renderWidth - 20);
     stave.addClef("treble");
